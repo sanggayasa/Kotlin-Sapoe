@@ -1,0 +1,239 @@
+<resources>
+    <string name="app_name">Sapoe</string>
+    <string name="change_language_test">Test Change Language. Current: EN</string>
+    <string name="network_offline">The Internet connections \nappears to be offline.</string>
+    <string name="no_internet">Tidak ada koneksi dengan internet.</string>
+    <string name="load_more">Load more</string>
+
+<!--LOGIN-->
+    <string name="selamat_datang">Selamat Datang!</string>
+    <string name="user_id">User ID</string>
+    <string name="password">Password</string>
+    <string name="min_char">min. 8 karakter</string>
+    <string name="masuk">Masuk</string>
+    <string name="userid_tidak_terdaftar">User ID tidak terdaftar</string>
+
+<!--POPUP DIALOG-->
+    <string name="tutup">Tutup</string>
+    <string name="lewati">Lewati</string>
+    <string name="lapor">Lapor Temuan</string>
+    <string name="yakin_lapor_tiket">Apakah anda yakin ingin melaporkan temuan ini dan membuat tiket?</string>
+    <string name="yakin_ambil_tiket">Apakah anda yakin ingin mengambil tiket ini?</string>
+    <string name="yakin_tutup_tiket">Apakah anda yakin ingin menutup tiket ini?</string>
+    <string name="yakin_batal_rute">Apakah anda yakin ingin keluar dan membatalkan pembuatan rute tak terjadwal?</string>
+    <string name="rute_takterduga">Apakah anda yakin ingin membuat rute tak terjadwal?</string>
+    <string name="rute_takterduga_sukses">Rute tak terjadwal berhasil dibuat.\n Apakah anda ingin langsung mengerjakan kunjungan ini?</string>
+    <string name="lapor_kunjungan">Apakah ada temuan pada kunjungan yang ingin dilaporkan?</string>
+    <string name="sukses_tiket">Terima kasih!\nTemuan berhasil dilaporkan. Anda dapat mengakses kembali temuan di menu Tiket</string>
+    <string name="sukses_simpan">Terima kasih!\nForm kunjungan berhasil disimpan</string>
+    <string name="sukses_tutup">Terima kasih!\nTiket berhasil ditutup</string>
+    <string name="logout_confirm">Apakah anda yakin ingin Log out?</string>
+    <string name="permission_request">Silahkan untuk menyalakan GPS / Location Service anda.</string>
+    <string name="ada_sparepart">Apakah ada sparepart yang dipakai pada temuan ini?</string>
+    <string name="force_update">Sudah terdapat versi aplikasi yang baru, mohon untuk diupdate.</string>
+    <string name="optional_update">Apakah yakin untuk update ke versi terbaru?</string>
+    <string name="update">Update</string>
+    <string name="no_update">Aplikasi merupakan versi terbaru</string>
+    <string name="ok_mengerti">OK, Saya mengerti</string>
+    <string name="location_error">Maaf, untuk sementara tidak dapat mengirim koordinat lokasi. Silahkan coba beberapa saat lagi</string>
+    <string name="yakin_delete_sparepart">Apakah yakin akan menghapus sparepart?</string>
+    <string name="need_location_request">Maaf lokasi belum mempunyai Lat Long, mohon untuk merequest Lat Long lokasi ini</string>
+    <string name="save_order">Apakah Anda yakin ingin menyimpan dan mengakhiri kunjungan ini?</string>
+
+    <!--MAIN-->
+    <string name="beranda">Beranda</string>
+    <string name="kunjungan">Kunjungan</string>
+    <string name="tak_terjadwal">Tak Terjadwal</string>
+    <string name="ticket">Tiket</string>
+    <string name="lainnya">Lainnya</string>
+
+    <!--HOME-->
+    <string name="pekerjaan">Pekerjaan</string>
+    <string name="lihat">Lihat</string>
+    <string name="status_trakhir">Status Terakhir</string>
+    <string name="berita_acara">Berita</string>
+    <string name="rute_kunjungan">Rute Kunjungan</string>
+    <string name="perkerjaan_kosong">Pekerjaan tidak ditemukan</string>
+    <string name="rute_tak_terjadwal">Rute Tak Terjadwal</string>
+    <string name="waktu">Waktu</string>
+    <string name="tiket">Tiket</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="lokasi_lintang">Longitude</string>
+    <string name="lokasi_bujur">Latitude</string>
+    <string name="klik_untuk_perbarui">Klik untuk perbarui</string>
+    <string name="selamat_datang_format">Selamat Datang, %1$s</string>
+    <string name="kunjungan_kosong">Data Kunjungan  tidak ditemukan</string>
+    <string name="takterduga_kosong">Data Tak terjadwal tidak ditemukan</string>
+    <string name="tiket_kosong">Data Tiket tidak ditemukan</string>
+    <string name="placeholder_empty_field">: -</string>
+    <string name="rute_fmt">%1$d Rute</string>
+    <string name="ticket_fmt">%1$d Tiket</string>
+    <string name="berita_acara_empty">Berita tidak ditemukan</string>
+
+    <!--KUNJUNGAN-->
+    <string name="open">Open</string>
+    <string name="in_progress">In Progress</string>
+    <string name="unsent">Unsent</string>
+    <string name="belum_terkirim">Belum Terkirim</string>
+    <string name="arsip">Arsip</string>
+    <string name="kunjungan_parent">Kunjungan Parent</string>
+    <string name="kunjungan_info">Info Kunjungan</string>
+    <string name="buka_map">Buka Map</string>
+    <string name="selesai">Selesai</string>
+    <string name="image_before">Foto Lokasi (Sebelum)</string>
+    <string name="image_after">Foto Lokasi (Sesudah)</string>
+    <string name="degree">Suhu Ruangan</string>
+    <string name="atm_before">Foto ATM Clean (Sebelum)</string>
+    <string name="atm_after">Foto ATM Clean (Sesudah)</string>
+    <string name="atm_outdoor">Outdoor Ruangan ATM</string>
+    <string name="atm_indoor">Indoor Ruangan ATM</string>
+    <string name="suhu_ruangan">Suhu Ruangan</string>
+    <string name="atm_machine">Mesin ATM</string>
+    <string name="temuan">Temuan (Opsional)</string>
+    <string name="button_ke_ticket">Ke Tiket Saya</string>
+    <string name="button_tambah_ticket">Tambah Tiket</string>
+    <string name="button_tambah_parts">Tambah Sparepart</string>
+    <string name="ambil_foto">Ambil Foto</string>
+    <string name="foto_ulang">Foto Ulang</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="neon_box">Neon Box</string>
+    <string name="neon_box_bendera">Neon Box - Bendera</string>
+    <string name="neon_box_lisplang">Neon Box - Lisplang</string>
+    <string name="neon_box_atas">Neon Box - Atas Mesin</string>
+    <string name="neon_box_wall">Neon Box - Wall Sign</string>
+    <string name="pintu_ruang">Pintu Ruang</string>
+    <string name="pintu_ruang_kondisi">Pintu Ruang -  Kondisi Pintu Ruang</string>
+    <string name="pintu_ruang_kebersihan">Pintu Ruang - Kebersihan Pintu Ruang</string>
+    <string name="sticker_pintu_ruang">Sticker Pintu Ruang ATM</string>
+    <string name="kondisi_ruang_atm">Kondisi Ruang ATM</string>
+    <string name="lantai">Lantai</string>
+    <string name="kondisi">Kondisi/Keterangan</string>
+    <string name="dinding">Dinding</string>
+    <string name="keterangan">Keterangan (opsional)</string>
+    <string name="plafon">Plafon</string>
+    <string name="keadaan_ruang_atm">Keadaan Ruang ATM - Tempat Sampah</string>
+    <string name="wsid">WSID</string>
+    <string name="jenis_mesin">Jenis Mesin</string>
+    <string name="pin_cover">Pin Cover</string>
+    <string name="anti_maling">Alat Anti Trapping FDI</string>
+    <string name="kamera_atm">Kamera ATM</string>
+    <string name="kamera_atm_rapi">Kamera ATM - Instalasi Rapi</string>
+    <string name="kamera_atm_dalam">Kamera ATM - Dalam</string>
+    <string name="sticker_mesin">Sticker Mesin</string>
+    <string name="ac">AC</string>
+    <string name="rute">+ Buat rute tak terjadwal</string>
+    <string name="tiket_btn">+ Buat tiket</string>
+    <string name="buat_rute">Buat Rute</string>
+    <string name="sticker_mesin_deno">Sticker Mesin - Denominasi</string>
+    <string name="serial_no_fmt">Serial No: %1$s</string>
+    <string name="tipe_nb_fmt">Tipe: %1$s</string>
+    <string name="wsid_fmt">WSID: %1$s</string>
+    <string name="name_ac_fmt">AC %1$s %2$d</string>
+    <string name="name_cl_fmt">ATM %1$s %2$d</string>
+    <string name="name_nb_fmt">NB %1$s %2$d</string>
+    <!--TIKET-->
+    <string name="tiket_saya">Tiket Saya</string>
+    <string name="semua_tiket">Semua Tiket</string>
+    <string name="buka_arsip">Buka Arsip Tiket</string>
+    <string name="arsip_tiket">Arsip Tiket</string>
+    <string name="buat_tiket">Buat Tiket</string>
+    <string name="lokasi_rute">Lokasi Rute</string>
+    <string name="kategori_tiket">Kategori Tiket</string>
+    <string name="kategori_part">Kategori Sparepart</string>
+    <string name="tipe_tiket">Tipe Tiket</string>
+    <string name="tipe">Tipe</string>
+    <string name="jenis_tiket">Jenis Tiket</string>
+    <string name="cari_jenis_tiket_hint">Ketik jenis tiket</string>
+    <string name="jenis_part">Jenis Sparepart</string>
+    <string name="jumlah">Quantity</string>
+    <string name="jumlah_hint">Kelipatan 0.5 &amp; maksimal 99</string>
+    <string name="qty_warning">Hanya dapat memasukkan angka kelipatan 0.5 &amp; maksimal 99</string>
+    <string name="reported">Reported by</string>
+    <string name="assigned">Assigned to</string>
+    <string name="info_tiket">Info Tiket</string>
+    <string name="ambil_tiket">Ambil Tiket</string>
+    <string name="tutup_tiket">Tutup Tiket</string>
+    <string name="temuan_before">Foto Temuan (Sebelum)</string>
+    <string name="temuan_after">Foto Temuan (Sesudah)</string>
+    <string name="spareparts">Sparepart (opsional)</string>
+    <string name="spareparts1">Sparepart %1$d</string>
+    <string name="sparepart">Sparepart</string>
+    <string name="foto_spareparts_before">Foto Sparepart 1 (sebelum)</string>
+    <string name="foto_spareparts_afeter">Foto Sparepart 1(sesudah)</string>
+    <string name="foto_spareparts2">Foto Sparepart 2</string>
+    <string name="tambah_spareparts">Tambah Sparepart</string>
+    <string name="foto_sparepart_req">Foto Sparepart (Required)</string>
+    <string name="foto_sparepart_opt">Foto Sparepart (Optional)</string>
+    <string name="data_arsip_hapus">Data arsip akan otomatis terhapus setelah 24 jam</string>
+    <string name="pilih_category_hint">- Pilih Kategori Sparepart -</string>
+    <string name="pilih_category_hint_t">Pilih Kategori Sparepart</string>
+    <string name="pilih_parts_hint">- Pilih Jenis Sparepart -</string>
+    <string name="pilih_parts_hint_t">Pilih Jenis Sparepart</string>
+    <string name="ketik_jenis_sparepart">Ketik jenis sparepart</string>
+    <string name="hint_opsional"> (maks. 200 karakter)</string>
+    <string name="foto_tidak_ditemukan">Foto tidak ditemukan</string>
+    <string name="foto_temuan">Foto Temuan</string>
+    <string name="foto_1">Foto 1</string>
+    <string name="jenis_tiket_fmt">Jenis Tiket : %1$s</string>
+    <string name="tiket_id_fmt">Tiket ID: %1$s</string>
+    <string name="tanggal_fmt">Tanggal: %1$s</string>
+    <string name="reported_fmt">Reported by: %1$s</string>
+    <string name="sla_fmt">SLA: %1$s</string>
+
+    <!--NEONBOX-->
+    <string name="ruang_atm">Keadaan Ruang ATM-AC</string>
+    <string name="kebersihan_ac">Kebersihan AC</string>
+    <string name="kedinginan_ac">Tingkat Kedinginan AC</string>
+    <string name="kelengkapan_ac">Kelengkapan Parts AC</string>
+
+<!--OTHER-->
+    <string name="press_back_to_exit">Press back to exit</string>
+    <string name="logout">Log Out</string>
+    <string name="batal">Batal</string>
+    <string name="ok">OK</string>
+    <string name="titik_dua">: </string>
+    <string name="nanti">Nanti</string>
+    <string name="ya">Ya</string>
+    <string name="ada">Ada</string>
+    <string name="hapus">Hapus</string>
+    <string name="strip">-</string>l
+    <string name="tidak_ada">Tidak Ada</string>
+    <string name="keluar">Keluar</string>
+    <string name="simpan">Simpan</string>
+    <string name="kembali_beranda">Kembali ke beranda</string>
+    <string name="kirim_history">Kirim History</string>
+    <string name="kirim_lokasi">Kirim Titik Koordinat</string>
+    <string name="galeri_foto">Galeri Foto</string>
+    <string name="update_versi">Update versi terbaru</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+<!--KIRIM HISTORY-->
+    <string name="pilih_tanggal">Pilih Tanggal</string>
+    <string name="dari">Dari</string>
+    <string name="sampai">Sampai</string>
+    <string name="tulis_pesan">Tulis Pesan</string>
+    <string name="pesan_hint">Dear Admin,\nSaya ingin mengirim history kunjungan pada tanggal tertera. Terimakasih</string>
+    <string name="kirim">Kirim</string>
+    <string name="kirim_history_confirm">Apakah Anda yakin ingin mengirim history?</string>
+    <string name="kirim_history_finish">Terima kasih!\nHistory berhasil dikirimkan ke admin</string>
+
+<!--KIRIM LOKASI RUTE-->
+    <string name="pilih_rute_hint">- Pilih Lokasi rute -</string>
+    <string name="pilih_jenis_tiket_t">Pilih jenis tiket</string>
+    <string name="pilih_jenis_tiket">- Pilih jenis tiket</string>
+    <string name="pilih_cat_tiket_t">Pilih kategori tiket</string>
+    <string name="pilih_cat_tiket">- Pilih kategori tiket</string>
+    <string name="pilih_cat_sparepart">- Pilih kategori sparepart -</string>
+    <string name="pilih_type_tiket_t">Pilih type tiket</string>
+    <string name="pilih_type_tiket">- Pilih type tiket</string>
+    <string name="pilih_lokasi_rute">Pilih Lokasi Rute</string>
+    <string name="ketik_lokasi_rute">Ketik lokasi rute</string>
+    <string name="kirim_lokasi_confirm">Apakah Anda yakin ingin mengirim lokasi rute?</string>
+    <string name="kirim_lokasi_finish">Terima kasih! Lokasi rute berhasil dikirimkan ke admin</string>
+    <string name="urut_terbaru">Urut dari terbaru</string>
+    <string name="urut_terdahulu">Urut dari terdahulu</string>
+
+    <string name="fake_gps_installed">Anda teridentifikasi menggunakan aplikasi Fake GPS. Mohon uninstall aplikasi Fake GPS anda sebelum melanjutkan pekerjaan.</string>
+
+</resources>

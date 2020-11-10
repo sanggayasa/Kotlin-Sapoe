@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.akarinti.sapoe">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="com.akarinti.sapoe.SapoeApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:largeHeap="true"
+        tools:ignore="GoogleAppIndexingWarning"
+        tools:targetApi="m">
+        <activity android:name="com.akarinti.sapoe.view.splash.SplashActivity"
+            android:theme="@style/AppTheme.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".view.login.LoginActivity" android:windowSoftInputMode="adjustResize|adjustPan"/>
+        <activity android:name=".view.main.MainActivity" android:windowSoftInputMode="adjustResize|adjustPan"/>
+        <activity android:name="com.akarinti.sapoe.view.main.visit.visit_parent.VisitParentActivity" />
+        <activity android:name="com.akarinti.sapoe.view.main.ticket.add.foto.FotoBeforeActivity" />
+        <activity android:name="com.akarinti.sapoe.view.main.ticket.add.foto.FotoAfterActivity" />
+        <activity android:name=".view.main.home.news.NewsActivity" />
+        <activity android:name="com.akarinti.sapoe.view.main.unscheduled.rute.RuteActivity" android:windowSoftInputMode="adjustResize|adjustPan"/>
+        <activity android:name="com.akarinti.sapoe.view.main.visit.suhu.SuhuActivity" />
+        <activity android:name=".view.main.ticket.add.TiketActivity" />
+        <activity android:name=".view.main.ticket.myticket.arsip.ArsipTicketActivity" />
+        <activity android:name=".view.main.ticket.add.info.InfoTiketActivity" />
+        <activity android:name=".view.main.ticket.add.spareparts.SparepartsActivity" />
+        <activity android:name=".view.main.other.send_history.SendHistoryActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".view.main.other.send_location.SendLocationActivity" />
+        <activity android:name=".view.main.other.gallery.GalleryPhotoActivity" />
+        <activity android:name=".view.main.unscheduled.unschedule_parent.UnscheduleParentActivity" />
+        <activity android:name=".view.main.unscheduled.unschedule_parent.child.UnscheduleChildActivity" />
+        <activity android:name=".view.main.visit.visit_parent.child.VisitChildActivity" />
+        <activity android:name=".view.main.visit.answer_parent.AnswerParentActivity" />
+        <activity android:name=".view.main.visit.answer_parent.child.AnswerChildActivity" />
+        <activity android:name=".view.main.unscheduled.answer_parent.UnscheduleAnswerParentActivity" />
+        <activity android:name=".view.main.unscheduled.answer_parent.child.UnscheduleAnswerChildActivity" />
+        <activity android:name=".view.main.unscheduled.unschedule_parent.question.UQuestionActivity" />
+        <activity android:name=".view.main.visit.visit_parent.question.SQuestionActivity" />
+        <activity android:name=".view.main.visit.answer_parent.question.SAnswerActivity" />
+        <activity android:name=".view.main.unscheduled.answer_parent.question.UAnswerActivity" />
+        <activity android:name=".view.main.ticket.myticket.arsipdetail.ArsipDetailActivity" />
+        <activity android:name=".view.main.ticket.myticket.arsipdetail.PhotoDetailActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tools:replace="android:resource"/>
+
+        </provider>
+    </application>
+
+</manifest>

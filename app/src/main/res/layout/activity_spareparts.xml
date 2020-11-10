@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_alice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tabTitle"
+        layout="@layout/toolbar_navigation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tabTitle">
+
+        <TextView
+            android:id="@+id/tvLat"
+            style="@style/RegularText.Form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_mischka"
+            android:text="@string/latitude"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.Form"
+            android:textColor="@color/grey_mischka"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLat"
+            android:text="@string/longitude" />
+        <View
+            android:id="@+id/viewStatus"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvLong" />
+        <TextView
+            android:id="@+id/tvLatValue"
+            style="@style/RegularText.Form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_mischka"
+            android:text=": -6.45654"
+            app:layout_constraintLeft_toRightOf="@id/viewStatus"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLongValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.Form"
+            android:textColor="@color/grey_mischka"
+            app:layout_constraintLeft_toRightOf="@id/viewStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvLatValue"
+            android:text=": 123.545656" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:background="@color/grey_alice"
+        android:layout_marginBottom="@dimen/_5sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tabSubTitle"
+        app:layout_constraintBottom_toTopOf="@id/tabButton">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_alice">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tabInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    style="@style/RegularText.BodyDefault"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_width="0dp"
+                    android:textAllCaps="true"
+                    android:layout_height="wrap_content"
+                    android:text="@string/spareparts1"
+                    android:textAlignment="textStart"
+                    android:textColor="@color/grey_storm"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvHapus"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_refresh"
+                    android:drawablePadding="@dimen/_2sdp"
+                    android:text="@string/hapus"
+                    android:textColor="@color/blue_dodger"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/tvStatus"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvStatus" />
+
+
+                <TextView
+                    android:id="@+id/tvKategori"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/kategori_part"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvStatus"/>
+                <TextView
+                    android:id="@+id/spCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_primary"
+                    android:drawableRight="@drawable/ic_arrow_form"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/pilih_cat_sparepart"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:textAppearance="@style/RegularText.Form"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvKategori" />
+
+                <com.akarinti.sapoe.view.component.CustomSpinner
+                    android:id="@+id/spKategoriParts"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="@id/spCategory"
+                    app:layout_constraintRight_toRightOf="@id/spCategory"
+                    app:layout_constraintTop_toBottomOf="@id/spCategory"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:visibility="invisible"
+                    android:background="@null" />
+                <TextView
+                    android:id="@+id/tvJenis"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/jenis_part"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spCategory"/>
+                <TextView
+                    android:id="@+id/spJenis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_primary"
+                    android:drawableRight="@drawable/ic_arrow_form"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/pilih_parts_hint"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:textAppearance="@style/RegularText.Form"
+                    android:enabled="false"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvJenis" />
+                <TextView
+                    android:id="@+id/tvQuantityLabel"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/jumlah"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spJenis"/>
+
+                <EditText
+                    android:id="@+id/etQuantity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuantityLabel"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@drawable/form_primary"
+                    android:gravity="center_vertical"
+                    android:inputType="numberDecimal"
+                    android:digits="0123456789."
+                    android:hint="@string/jumlah_hint"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp" />
+
+                <TextView
+                    android:id="@+id/tvQuantityWarning"
+                    style="@style/RegularText.BodySmall"
+                    android:visibility="invisible"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/qty_warning"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/etQuantity"/>
+
+                <TextView
+                    android:id="@+id/tvFoto1"
+                    style="@style/RegularText.BodySmall"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="@string/foto_sparepart_req"
+                    android:textColor="@color/grey_storm"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAllCaps="true"
+                    app:layout_constraintTop_toBottomOf="@id/tvQuantityWarning"/>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpCameraBefore"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_280sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFoto1"/>
+
+                <TextView
+                    android:id="@+id/tvFoto2"
+                    style="@style/RegularText.BodySmall"
+                    android:textSize="@dimen/_12ssp"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/foto_sparepart_opt"
+                    android:textColor="@color/grey_storm"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textAllCaps="true"
+                    app:layout_constraintTop_toBottomOf="@id/vpCameraBefore"/>
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpCameraAfter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_280sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFoto2"/>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/tabButton"
+        layout="@layout/button_navigation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

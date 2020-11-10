@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1990EA</color>
+    <color name="colorPrimaryDark">#121528</color>
+    <color name="colorAccent">#045B9D</color>
+    <color name="colorTransparent">#00000000</color>
+
+    <color name="black_russian">#121528</color>
+    <color name="black_russian_70">#B3121528</color>
+    <color name="grey_storm">#71737E</color>
+    <color name="grey_linkwater">#BEC1C7</color>
+    <color name="grey_mischka">#ADB1B8</color>
+    <color name="grey_mischka_40">#66ADB1B8</color>
+    <color name="grey_mischka_60">#99ADB1B8</color>
+    <color name="grey_ghost">#C9C9D1</color>
+    <color name="grey_lavender">#E9E9ED</color>
+    <color name="grey_alice">#F9FAFC</color> //base bacground
+    <color name="blue_cobalt">#045B9D</color>
+    <color name="blue_dodger">#1990EA</color>
+    <color name="blue_turquoise">#45D1E0</color>
+    <color name="white_azure">#F9FAFA</color>
+    <color name="white">#FFFFFF</color>
+    <color name="orange_tangerine">#FFA30B</color>
+    <color name="green_caribbbean">#08C198</color>
+</resources>
+
+<!--color naming from https://www.htmlcsscolor.com/-->

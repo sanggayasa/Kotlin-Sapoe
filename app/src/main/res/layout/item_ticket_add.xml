@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toBottomOf="@id/tabKunjungan"
+        android:id="@+id/tabTakTerjadwal"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:padding="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvTicket"
+            style="@style/RegularText.Form"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Tiket 1"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.BodySmall"
+            android:textColor="@color/grey_storm"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvTicket"
+            android:text="Tipe Tiket: Layanan" />
+        <TextView
+            android:id="@+id/separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.BodySmall"
+            android:textColor="@color/grey_storm"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layout_constraintLeft_toRightOf="@id/tvType"
+            app:layout_constraintTop_toBottomOf="@id/tvTicket"
+            android:text="|" />
+        <TextView
+            android:id="@+id/tvJenis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.BodySmall"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/grey_storm"
+            app:layout_constraintLeft_toRightOf="@id/separator"
+            app:layout_constraintTop_toBottomOf="@id/tvTicket"
+            android:text="Jenis Tiket: Lampu Rusak" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="wrap_content"
+        android:background="@color/grey_ghost"
+        android:layout_marginTop="@dimen/_5sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNews"
+        android:layout_height="@dimen/_2sdp" />
+</LinearLayout>

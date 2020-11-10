@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_alice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tabTitle"
+        layout="@layout/toolbar_navigation" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@color/grey_alice"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/tabTitle"
+        app:layout_constraintBottom_toTopOf="@id/tabButton">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tabContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey_alice">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tabInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/tvLokasi"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lokasi_rute"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvLocation"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_primary"
+                    android:drawableRight="@drawable/ic_arrow_form"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/pilih_rute_hint"
+                    android:textAppearance="@style/RegularText.Form"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLokasi" />
+
+                <TextView
+                    android:id="@+id/tvKategori"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/kategori_tiket"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvLocation" />
+
+                <TextView
+                    android:id="@+id/spCat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_primary"
+                    android:drawableRight="@drawable/ic_arrow_form"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/pilih_cat_tiket"
+                    android:textAppearance="@style/RegularText.Form"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvKategori" />
+
+                <com.akarinti.sapoe.view.component.CustomSpinner
+                    android:id="@+id/spKategoriTicket"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="@id/spCat"
+                    app:layout_constraintRight_toRightOf="@id/spCat"
+                    app:layout_constraintTop_toBottomOf="@id/spCat"
+                    android:visibility="invisible"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/tvTipe"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/tipe_tiket"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spCat" />
+
+                <TextView
+                    android:id="@+id/spType"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_primary"
+                    android:drawableRight="@drawable/ic_arrow_form"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/pilih_type_tiket"
+                    android:textAppearance="@style/RegularText.Form"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvTipe" />
+
+                <com.akarinti.sapoe.view.component.CustomSpinner
+                    android:id="@+id/spTypeTicket"
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/_10sdp"
+                    app:layout_constraintLeft_toLeftOf="@id/spType"
+                    app:layout_constraintRight_toRightOf="@id/spType"
+                    app:layout_constraintTop_toBottomOf="@id/spType"
+                    android:visibility="invisible"
+                    android:background="@null" />
+
+                <TextView
+                    android:id="@+id/tvJenis"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/jenis_tiket"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spType" />
+
+                <TextView
+                    android:id="@+id/spJenis"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/form_primary"
+                    android:drawableRight="@drawable/ic_arrow_form"
+                    android:gravity="center_vertical"
+                    android:inputType="none"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:text="@string/pilih_jenis_tiket"
+                    android:textAppearance="@style/RegularText.Form"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvJenis" />
+
+<!--                <com.akarinti.sapoe.view.component.CustomSpinner-->
+<!--                    android:id="@+id/spJenisSla"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="@dimen/_10sdp"-->
+<!--                    app:layout_constraintLeft_toLeftOf="@id/spJenis"-->
+<!--                    app:layout_constraintRight_toRightOf="@id/spJenis"-->
+<!--                    app:layout_constraintTop_toBottomOf="@id/spJenis"-->
+<!--                    android:visibility="invisible"-->
+<!--                    android:background="@null" />-->
+
+                <TextView
+                    android:id="@+id/tvKeterangan"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="@string/keterangan"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/spJenis" />
+
+                <EditText
+                    android:id="@+id/etKeterangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_50sdp"
+                    android:background="@drawable/form_primary"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:hint="@string/hint_opsional"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/_5sdp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvKeterangan" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/tabCamera"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/grey_alice"
+                android:padding="@dimen/_10sdp"
+                app:layout_constraintTop_toBottomOf="@id/tabInput">
+
+                <TextView
+                    android:id="@+id/tvFotoTemuan"
+                    style="@style/RegularText.BodySmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:text="@string/foto_temuan"
+                    android:textAllCaps="true"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/vpCamera"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_280sdp"
+                    android:background="@color/grey_alice"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvFotoTemuan"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/tabButton"
+        layout="@layout/button_navigation" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

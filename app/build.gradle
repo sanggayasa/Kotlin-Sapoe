@@ -1,0 +1,144 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+ext.anko_version='0.10.8'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '29.0.3'
+    defaultConfig {
+        applicationId "com.akarinti.sapoe"
+        minSdkVersion 22
+        targetSdkVersion 29
+        versionCode 3
+        versionName "1.6"
+        buildConfigField("String", "GT", "\"${developP1}\"")
+        buildConfigField("String", "UN", "\"${developP2}\"")
+        buildConfigField("String", "PD", "\"${developP3}\"")
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    signingConfigs {
+        config {
+            keyAlias 'inspira'
+            keyPassword '#ait#sapoe#'
+            storeFile file('../sapoe.jks')
+            storePassword '#ait#sapoe#'
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            minifyEnabled true
+            debuggable true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+    }
+    flavorDimensions('tier')
+    productFlavors {
+        develop {
+            dimension 'tier'
+            buildConfigField("String", "BASE_URL", "\"${developBaseUrl}\"")
+        }
+        staging {
+            dimension 'tier'
+            buildConfigField("String", "BASE_URL", "\"${stagingBaseUrl}\"")
+        }
+        production {
+            dimension 'tier'
+            buildConfigField("String", "BASE_URL", "\"${prodBaseUrl}\"")
+        }
+    }
+    androidExtensions {
+        experimental = true
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.1.0-alpha04'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'com.google.android.material:material:1.1.0-alpha05'
+    implementation 'androidx.multidex:multidex:2.0.1'
+    //Retrofit
+    implementation 'com.squareup.okhttp3:okhttp:3.12.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.12.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+    implementation 'com.f2prateek.rx.preferences:rx-preferences:1.0.2'
+
+    //Rxjava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.0'
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.2'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.3.0'
+    //RxBinding
+    implementation 'com.jakewharton.rxbinding3:rxbinding:3.0.0-alpha2'
+    //Dagger
+    kapt 'com.google.dagger:dagger-compiler:2.24'
+    kapt 'com.google.dagger:dagger-android-processor:2.24'
+    implementation 'com.google.dagger:dagger:2.24'
+    implementation 'com.google.dagger:dagger-android-support:2.24'
+    //UI
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.44'
+    implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
+    implementation 'com.sothree.slidinguppanel:library:3.4.0'
+    implementation 'com.github.ybq:Android-SpinKit:1.4.0'
+    //Utils
+    implementation 'net.danlew:android.joda:2.10.1.1'
+    implementation 'com.thanosfisherman.mayi:mayi:2.1'
+    implementation 'androidx.exifinterface:exifinterface:1.0.0'
+    implementation 'com.priyankvasa.android:cameraview-ex:3.4.3'
+    implementation 'com.jaredrummler:android-device-names:1.1.9'
+    implementation 'io.vrinda.kotlinpermissions:kotlinpermissions:1.1'
+    implementation 'com.liulishuo.okdownload:okdownload:1.0.7'
+    implementation 'com.liulishuo.okdownload:ktx:1.0.7'
+    //Anko Commons
+    implementation "org.jetbrains.anko:anko-commons:$anko_version"
+    //Design
+    implementation "org.jetbrains.anko:anko-design:$anko_version"
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+    //Image loader
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    kapt 'com.github.bumptech.glide:compiler:4.9.0'
+    //Fragment Manager
+    implementation 'com.github.nridwan:FragNav:-SNAPSHOT'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //Firebase
+    //implementation 'com.google.firebase:firebase-analytics:17.2.2'
+    implementation 'com.google.firebase:firebase-crashlytics-ktx:17.2.2'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+}
+
+android.applicationVariants.all { variant ->
+    variant.outputs.all {
+        def flavor = "default"
+        if (variant.productFlavors.size() > 0){
+            flavor = variant.productFlavors.get(0).name
+        }
+        def date = new Date()
+        def formattedDate = date.format('dd-MMM-yyyy')
+        outputFileName = "Sapoe_"+variant.versionName+"("+variant.versionCode+")_" + formattedDate + "_"+ flavor + ".apk"
+    }
+}

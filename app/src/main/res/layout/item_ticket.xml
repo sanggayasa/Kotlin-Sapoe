@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/tabKunjungan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_7sdp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_5sdp">
+
+            <ImageView
+                android:id="@+id/ivDone"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:background="@drawable/ic_complete"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvProcess"
+                style="@style/BoldText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/orange_tangerine"
+                android:textSize="@dimen/_11ssp"
+                android:textAllCaps="true"
+                app:layout_constraintBottom_toBottomOf="@id/tvPlaceTicket"
+                app:layout_constraintRight_toRightOf="parent"
+                tools:text="OPEN" />
+
+            <TextView
+                android:id="@+id/tvPlaceTicket"
+                style="@style/BoldText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_13ssp"
+                android:ellipsize="end"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ivDone"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="ATM BCA pluit sakti" />
+
+            <TextView
+                android:id="@+id/tvAddressTicket"
+                style="@style/RegularText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:textColor="@color/grey_storm"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/ivDone"
+                app:layout_constraintTop_toBottomOf="@id/tvPlaceTicket"
+                tools:text="Jln woro wiri no 32 Jln woro wiri no 32 Jln woro wiri no 32Jln woro wiri no 32 Jln woro wiri no 32 Jln woro wiri no 32 Jln woro wiri no 32 Jln woro wiri no 32" />
+
+            <TextView
+                android:id="@+id/tvJenis"
+                style="@style/RegularText.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_storm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="@id/separator"
+                app:layout_constraintBottom_toBottomOf="@id/separator"
+                tools:text="Jenis Tiket: Lampu rusak" />
+
+            <TextView
+                android:id="@+id/separator"
+                style="@style/RegularText.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/grey_storm"
+                app:layout_constraintLeft_toRightOf="@id/tvJenis"
+                app:layout_constraintTop_toBottomOf="@id/tvAddressTicket"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="|" />
+
+            <TextView
+                android:id="@+id/tvId"
+                style="@style/RegularText.BodySmall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:textColor="@color/grey_storm"
+                app:layout_constraintLeft_toRightOf="@id/separator"
+                app:layout_constraintTop_toTopOf="@id/separator"
+                app:layout_constraintBottom_toBottomOf="@id/separator"
+                tools:text="Tiket ID: 1223423" />
+
+            <TextView
+                android:id="@+id/tvTicketDate"
+                style="@style/RegularText.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_storm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvJenis"
+                tools:text="Tanggal: 22 Jun 2020 19:30" />
+
+            <TextView
+                android:id="@+id/tvReported"
+                style="@style/RegularText.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_storm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvTicketDate"
+                tools:text="Reported by: Admin" />
+
+            <TextView
+                android:id="@+id/tvSla"
+                style="@style/RegularText.BodySmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textColor="@color/grey_storm"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvReported"
+                tools:text="SLA: Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru Admin Test Ticket baru " />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

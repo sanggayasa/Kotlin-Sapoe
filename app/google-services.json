@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "119018740856",
+    "firebase_url": "https://sapoe-android.firebaseio.com",
+    "project_id": "sapoe-android",
+    "storage_bucket": "sapoe-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:119018740856:android:9e83ae75f22747e277e18d",
+        "android_client_info": {
+          "package_name": "com.akarinti.sapoe"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "119018740856-is95e7ek4mmv3g3lch78o32t4ugu4740.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBp76RCQBzE06yvHVZx2Sw1bjF8K2lnEvk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "119018740856-is95e7ek4mmv3g3lch78o32t4ugu4740.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

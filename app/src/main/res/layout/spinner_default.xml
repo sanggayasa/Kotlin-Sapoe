@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_5sdp"
+    android:background="@color/white"
+    tools:ignore="HardcodedText,RtlHardcoded">
+
+    <TextView
+        android:id="@+id/tvQuestion"
+        style="@style/RegularText.BodySmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_25sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:textColor="@color/black_russian"
+        tools:text="Neon Box" />
+
+    <TextView
+        android:id="@+id/tvAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvQuestion"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:background="@drawable/bg_white_outline"
+        android:drawableRight="@drawable/ic_arrow_form"
+        android:gravity="center_vertical"
+        android:hint="-"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_5sdp" />
+
+    <com.akarinti.sapoe.view.component.CustomSpinner
+        android:id="@+id/csAnswer"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_below="@id/tvAnswer"
+        android:layout_alignLeft="@id/tvAnswer"
+        android:layout_alignRight="@id/tvAnswer"
+        android:visibility="invisible"
+        android:background="@null" />
+
+</RelativeLayout>

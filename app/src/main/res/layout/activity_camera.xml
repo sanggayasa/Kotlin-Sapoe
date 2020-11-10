@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/grey_alice"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include
+        android:id="@+id/tabTitle"
+        layout="@layout/toolbar_navigation" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/tabSubTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:paddingStart="@dimen/_20sdp"
+        android:background="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/tabTitle">
+
+        <TextView
+            android:id="@+id/tvLat"
+            style="@style/RegularText.Form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_mischka"
+            android:text="@string/latitude"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.Form"
+            android:textColor="@color/grey_mischka"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tvLat"
+            android:text="@string/longitude" />
+        <View
+            android:id="@+id/viewStatus"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="0dp"
+            android:layout_marginLeft="@dimen/_25sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toRightOf="@id/tvLong" />
+        <TextView
+            android:id="@+id/tvLatValue"
+            style="@style/RegularText.Form"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey_mischka"
+            android:text=": -6.45654"
+            app:layout_constraintLeft_toRightOf="@id/viewStatus"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvLongValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/RegularText.Form"
+            android:textColor="@color/grey_mischka"
+            app:layout_constraintLeft_toRightOf="@id/viewStatus"
+            app:layout_constraintTop_toBottomOf="@id/tvLatValue"
+            android:text=": 123.545656" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="@dimen/_10sdp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/tabSubTitle"
+        app:layout_constraintBottom_toTopOf="@id/tabButton">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vpCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/tabButton"
+        layout="@layout/button_navigation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
